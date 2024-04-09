@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>2.1. Kaulai | "Spine" programinės įrangos pagrindinės funkcijos ir jų taikymas </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="Rytis Lukaitis" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+    </head>
+<body class="exe-web-site" id="exe-node-11"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Skip navigation</a></p>
+<header id="header" ><div id="headerContent">"Spine" programinės įrangos pagrindinės funkcijos ir jų taikymas</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Kurso kortelė</a></li>
+   <li><a href="vadas.html" class="no-ch">Įvadas</a></li>
+   <li><a href="1_spine_programins_rangos_funkcionalumas.html" class="daddy">1. "Spine" programinės įrangos funkcionalumas</a>
+   <ul class="other-section">
+      <li><a href="11_spine_programin_ranga.html" class="no-ch">1.1. "Spine" programinė įranga</a></li>
+      <li><a href="12_spine_funkcionalumas.html" class="no-ch">1.2. "Spine" funkcionalumas</a></li>
+      <li><a href="13_savikontrols_klausimai.html" class="no-ch">1.3. Savikontrolės klausimai</a></li>
+   </ul>
+   </li>
+   <li class="current-page-parent"><a href="2_spine_pagrindins_funkcijos.html" class="current-page-parent daddy">2. "Spine" pagrindinės funkcijos</a>
+   <ul>
+      <li id="active"><a href="21_kaulai.html" class="active daddy">2.1. Kaulai</a>
+      <ul>
+         <li><a href="211_paveldjimai.html" class="no-ch">2.1.1. Paveldėjimai</a></li>
+         <li><a href="212_kaulo_ilgis.html" class="no-ch">2.1.2. Kaulo ilgis</a></li>
+         <li><a href="213_kiti_parametrai.html" class="no-ch">2.1.3. Kiti parametrai</a></li>
+      </ul>
+      </li>
+      <li><a href="22_paveiksl_tinkleliai.html" class="no-ch">2.2. Paveikslų tinkleliai</a></li>
+      <li><a href="23_transformacijos.html" class="no-ch">2.3. Transformacijos</a></li>
+      <li><a href="24_raktiniai_kadrai.html" class="no-ch">2.4. Raktiniai kadrai</a></li>
+      <li><a href="25_savikontrols_klausimai.html" class="no-ch">2.5. Savikontrolės klausimai</a></li>
+   </ul>
+   </li>
+   <li><a href="bendrasis_savikontrols_testas.html" class="no-ch">Bendrasis savikontrolės testas</a></li>
+   <li><a href="literatra.html" class="no-ch">Literatūra</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="2_spine_pagrindins_funkcijos.html" class="prev"><span><span>&laquo; </span>Previous</span></a> <span class="sep">| </span><a href="211_paveldjimai.html" class="next"><span>Next<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">2.1. Kaulai</h1></header>
+<article class="iDevice_wrapper textIdevice" id="id25">
+<div class="iDevice emphasis0" >
+<div id="ta25_136_2" class="block iDevice_content">
+<div class="exe-text"><p>Kaulas – vienas ir pagrindinių elementų <em>Spine</em> programinėje įrangoje. Jie naudojami beveik visose animacijose, net ir tų skeletų, kurie yra paprasčiausi objektai, o ne kokie nors veikėjai. Paprasti skeletai gali naudoti po vieną kaulą vienam paveikslėliui. Sudėtingesni skeletai gali susieti paveikslus su keliais kaulais, kad jie deformuotųsi animuojant kaulus.</p>
+<p>Skeletas turi kaulų hierarchiją kurioje visada yra vienas pagrindinis, šakninis, kaulas (žr. 1 pav.). Šakninis kaulas gali turėti po juo esančių antrinių, kitaip vadinamų dukterinių, kaulų, kurie patys savyje gali turėti kitų dukterinių kaulų ir t. t.</p>
+<table border="0" style="height: 25px; margin-left: auto; margin-right: auto;">
+<tbody>
+<tr style="height: 25px;">
+<td style="width: 100%; height: 25px;"><a href="image1.jpg" target="_blank" rel="noopener"><img src="image1.jpg" alt="" width="356" height="235" hspace="auto" style="display: block; margin-left: auto; margin-right: auto;" /></a></td>
+</tr>
+</tbody>
+</table>
+<p style="text-align: center;"><strong>1 pav. </strong>Kaulų hierarchija</p>
+<p>Kaulus galima kurti naudojant „kūrimo įrankį“ (angl. <em>Create</em> <em>Tool</em>) bei pasirinkus bet kurį nors kaulą paspausti <em>New...</em> ir <em>Bone</em> mygtukus hierarchijos medžio (angl. <em>Tree</em> <em>View</em>) savybių lange. Tokiu atveju naujas kaulas bus sukurtas pasirinkto (tėvinio) kaulo viršūnėje.</p>
+<table style="margin-left: auto; margin-right: auto;">
+<tbody>
+<tr>
+<td style="width: 100%;"><a href="image2.jpg" target="_blank" rel="noopener"><img src="image2.jpg" width="382" height="162" /></a></td>
+</tr>
+</tbody>
+</table>
+<p style="text-align: center;"><strong>2 pav.</strong> Kaulo savybės</p>
+<p>Toliau apžvelgsime kaulų savybes, kurios matomos 2-ame paveiksle.</p></div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Licensed under the</span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution Share Alike License 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="2_spine_pagrindins_funkcijos.html" class="prev"><span><span>&laquo; </span>Previous</span></a> <span class="sep">| </span><a href="211_paveldjimai.html" class="next"><span>Next<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Made with eXeLearning<span> (New Window)</span></span></a></p><script type="text/javascript" src="_style_js.js"></script></body></html>
